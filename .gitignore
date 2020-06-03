@@ -1,0 +1,9 @@
+#Files
+.DS_Store
+.classpath
+.update-lock
+.project
+
+#Folders
+.metadata
+.settings/org.eclipse.jdt.core.prefs

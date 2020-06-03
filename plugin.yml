@@ -1,0 +1,10 @@
+name: PVPArena
+main: dannikinfo.pvparena.PVPArena
+author: dannikinfo
+version: 0.1
+
+commands:
+   pa:
+      description: базовая команда арен
+      permission: <plugin name>.pa
+      usage: /<command>
