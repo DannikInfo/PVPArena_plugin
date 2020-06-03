@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#Debug.sh - debug plugin
+
+#P.s. чтоб скрипт корректно отрботал после последней строки в version.properties должна быть еще одна пустая строка.
+
+#относительно текущей директории где находится сервер
+SERVER_PATH=./../TestServer/
+version=()
+name=PVPArena
+
+while read LINE
+do
+	IFS='=' read -ra a <<< "$LINE";
+    version+=(${a[1]})
+done < version.properties
+
+./gradlew build
+
+cp ./build/libs/$name-${version[0]}.${version[1]}.${version[2]}${version[3]}.jar $SERVER_PATH/plugins/
